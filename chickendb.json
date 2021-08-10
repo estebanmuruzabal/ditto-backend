@@ -1,0 +1,36 @@
+{
+    "personal": {
+        "id": "1",
+        "userRoleCode": "worker-chicken",
+        "password": "2020",
+        "username": "tony",
+        "email": null,
+        "lastName": "",
+        "middleName": "",
+        "firstName": "Antonio",
+        "gender": "Male",
+        "dateOfBirth": "",
+        "telephoneNumber": null,
+        "photos": []
+    },
+    "work": {
+        "stoppedWorkTime": null,
+        "startedWorkTime": null,
+        "ratePerHour": 200,
+        "totalWorkingHoursPerWeek": 0,
+        "totalSalaryToPayWeekly": 0,
+        "advancedSalaryPaid": 0,
+        "isWorking": false,
+        "taskRelated": null
+    },
+    "todoTasks": [
+        {
+        "id": 1,
+        "startDate": null,
+        "finishDate": null,
+        "isDone": false,
+        "description": "",
+        "workedHours": 0
+        }
+    ]
+}
