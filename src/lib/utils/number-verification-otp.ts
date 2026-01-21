@@ -233,8 +233,8 @@ const getAccesToken = async () => {
     const client_secret = process.env.GMAIL_CLIENT_SECRET;
 
     // var data = qs.stringify({
-    //   client_id: '781050703767-lsf0dfi6fdmbmaamfmbopha59562qrfc.apps.googleusercontent.com',
-    //     client_secret: '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',
+    //   client_id: 'asdassdasad',
+    //     client_secret: 'asdsadsadsad',
     //     // grant_type: 'password',
     //     grant_type: "refresh_token",
     //     // username: 'dittofarmresistencia@gmail.com',
