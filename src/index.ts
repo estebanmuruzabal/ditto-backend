@@ -152,7 +152,7 @@ const withSession = () => {
 const mount = async (app: Application) => {
     // client = fs.existsSync(SESSION_FILE_PATH) ? withSession() : withOutSession();
 
-    client = withOutSession();
+    // client = withOutSession();
 
     const hostname = 'localhost';
     // const hostname = '0.0.0.0';
