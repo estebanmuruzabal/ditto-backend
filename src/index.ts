@@ -8,7 +8,6 @@ import {typeDefs, resolvers} from "./graphql";
 import cors from "cors";
 import moment from 'moment';
 import path from "path";
-import https from "https";
 const fs = require('fs');
 const DELAY_TIME = 170; //ms
 // import { fstat, fstatSync } from 'fs';
@@ -152,7 +151,7 @@ const withSession = () => {
 const mount = async (app: Application) => {
     // client = fs.existsSync(SESSION_FILE_PATH) ? withSession() : withOutSession();
 
-    // client = withOutSession();
+    client = withOutSession();
 
     const hostname = 'localhost';
     // const hostname = '0.0.0.0';
@@ -184,21 +183,11 @@ const mount = async (app: Application) => {
     });
     // readInboxContent("from:info@mercadopago.com");
     const port = process.env.PORT;
-    try {
-        const httpsOptions = {
-            key: fs.readFileSync(path.join(process.cwd(), 'server.key')),
-            cert: fs.readFileSync(path.join(process.cwd(), 'server.crt')),
-        };
-        https.createServer(httpsOptions, app).listen(7000, hostname, () => {
-            console.log(`Server running at https://${hostname}:${port}`);
-        });
-        console.log(`[app]: https://${hostname}:${process.env.PORT}`);
-    } catch (e) {
+
         app.listen(7000, hostname, () => {
             console.log(`Server running at http://${hostname}:${port}`)
         });
         console.log(`[app]: http://${hostname}:${process.env.PORT}`);
-    }
       
 };
 
