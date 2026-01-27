@@ -1,0 +1,9 @@
+# dependencies
+node_modules
+
+# ignore log files
+.vscode/
+
+# ignore whatsapp auth files
+.wwebjs_auth/*
+../client/packages/shop/.next/*
