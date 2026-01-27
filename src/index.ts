@@ -153,8 +153,8 @@ const mount = async (app: Application) => {
 
     client = withOutSession();
 
-    const hostname = 'localhost';
-    // const hostname = '0.0.0.0';
+    // const hostname = 'localhost';
+    const hostname = '0.0.0.0';
     // mongodb connection
     const db = await connectDatabase();
     // apollo server
